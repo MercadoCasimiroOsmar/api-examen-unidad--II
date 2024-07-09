@@ -7,10 +7,13 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "items")
 public class Item {
 

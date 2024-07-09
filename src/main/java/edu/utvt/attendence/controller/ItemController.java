@@ -32,7 +32,7 @@ public class ItemController {
 	}
 	
 	@GetMapping
-	public Page<Item>findAll(@RequestParam(defaultValue = "1", value = "page") String page, String size){
+	public Page<Item>findAll(@RequestParam(defaultValue = "1", value = "page") String page,  @RequestParam(value = "size", defaultValue = "50") String size){
 		return this.itemService.findAll(page,size);
 	}
 	
